@@ -55,3 +55,6 @@ if __name__ == '__main__':
     amplitude = 40
     df = generate_time_series(days, slope, baseline, noise_level, amplitude)
     plot_series(df['TIME'], df['TIME_SERIES'])
+
+    df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/a10.csv', parse_dates=['date'])
+    plot_series(df['date'], df['value'])
